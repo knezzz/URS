@@ -4,13 +4,9 @@
 
 ### Well this app will make URF game even faster. Because why not!
 
-![main screen](https://github.com/knezzz/URS/blob/master/screenShoots/Screenshot_2015-04-17-22-21-38.png)
+![main screen](https://github.com/knezzz/URS/blob/master/screenShoots/Screenshot_2015-04-17-22-21-38.png) ![map view start](https://github.com/knezzz/URS/blob/master/screenShoots/Screenshot_2015-04-17-22-21-44.png)
 
-![map view start](https://github.com/knezzz/URS/blob/master/screenShoots/Screenshot_2015-04-17-22-21-44.png)
-
-![map view 12 minutes](https://github.com/knezzz/URS/blob/master/screenShoots/Screenshot_2015-04-17-22-23-00.png)
-
-![map view won!](https://github.com/knezzz/URS/blob/master/screenShoots/Screenshot_2015-04-17-22-24-00.png)
+![map view 12 minutes](https://github.com/knezzz/URS/blob/master/screenShoots/Screenshot_2015-04-17-22-23-00.png) ![map view won!](https://github.com/knezzz/URS/blob/master/screenShoots/Screenshot_2015-04-17-22-24-00.png)
 
 #### _Android app that will show roughly how the game was played in 10x speed_
 
