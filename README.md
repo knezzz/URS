@@ -5,7 +5,9 @@
 ### Well this app will make URF game even faster. Because why not!
 
 
-##### _Android app that will show roughly how the game was played in 10x speed_
+#### _Android app that will show roughly how the game was played in 10x speed_
+
+##### The app can be downloaded here: [Dropbox](https://www.dropbox.com/s/00cievleaohu3m4/UltraRapidSpectate.apk?dl=0)
 
 #### How does it work:
  **Map**:
