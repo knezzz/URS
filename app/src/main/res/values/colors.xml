@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blueTeam" type="color">#21a2f7</color>
+    <color name="redTeam" type="color">#f1594f</color>
+    <color name="grey" type="color">#888888</color>
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/summoner1"
+        android:layout_width="@dimen/champion_preview_width"
+        android:layout_height="@dimen/champion_preview_height"/>
+
+    <ImageView
+        android:id="@+id/summoner2"
+        android:layout_toRightOf="@id/summoner1"
+        android:layout_width="@dimen/champion_preview_width"
+        android:layout_height="@dimen/champion_preview_height"/>
+
+    <ImageView
+        android:id="@+id/summoner3"
+        android:layout_toRightOf="@id/summoner2"
+        android:layout_width="@dimen/champion_preview_width"
+        android:layout_height="@dimen/champion_preview_height"/>
+
+    <ImageView
+        android:id="@+id/summoner4"
+        android:layout_toRightOf="@id/summoner3"
+        android:layout_width="@dimen/champion_preview_width"
+        android:layout_height="@dimen/champion_preview_height"/>
+
+    <ImageView
+        android:id="@+id/summoner5"
+        android:layout_toRightOf="@id/summoner4"
+        android:layout_width="@dimen/champion_preview_width"
+        android:layout_height="@dimen/champion_preview_height"/>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/scoreTeam1"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@string/score_divider"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/scoreTeam2"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/summoner10"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/champion_preview_width"
+        android:layout_height="@dimen/champion_preview_height"/>
+
+    <ImageView
+        android:id="@+id/summoner9"
+        android:layout_toLeftOf="@id/summoner10"
+        android:layout_width="@dimen/champion_preview_width"
+        android:layout_height="@dimen/champion_preview_height"/>
+
+    <ImageView
+        android:id="@+id/summoner8"
+        android:layout_toLeftOf="@id/summoner9"
+        android:layout_width="@dimen/champion_preview_width"
+        android:layout_height="@dimen/champion_preview_height"/>
+
+    <ImageView
+        android:id="@+id/summoner7"
+        android:layout_toLeftOf="@id/summoner8"
+        android:layout_width="@dimen/champion_preview_width"
+        android:layout_height="@dimen/champion_preview_height"/>
+
+    <ImageView
+        android:id="@+id/summoner6"
+        android:layout_toLeftOf="@id/summoner7"
+        android:layout_width="@dimen/champion_preview_width"
+        android:layout_height="@dimen/champion_preview_height"/>
+</RelativeLayout>

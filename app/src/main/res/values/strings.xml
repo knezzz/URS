@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">UltraRapidSpectate</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_spectate_main">SpectateMain</string>
+    <string name="search">Search</string>
+    <string name="search_hint">URF game ID</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="score_divider">-</string>
+    <string name="title_activity_region_picker">RegionPicker</string>
+    <string name="title_activity_date_chooser">DateChooser</string>
+    <string name="URF_Date">, April 2015</string>
+    <string name="cancel">CANCEL</string>
+    <string name="ok">OK</string>
+</resources>

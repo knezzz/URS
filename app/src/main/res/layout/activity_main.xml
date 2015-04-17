@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/timeLine"
+        android:weightSum="4"
+        android:layout_width="fill_parent"
+        android:background="@color/primary_material_light"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/epochTime"
+            android:layout_weight="3"
+            android:padding="10sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/region"
+            android:layout_weight="1"
+            android:padding="10sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/matchListview"
+        android:layout_below="@id/timeLine"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

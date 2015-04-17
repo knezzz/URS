@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="knezzz.hr.ultrarapidspectate.map.SpectateMain">
+        <knezzz.hr.ultrarapidspectate.map.MapView
+            android:id="@+id/spectateMap"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/matchTime"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <ListView
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0sp"
+                android:id="@+id/spectateTimeline"
+                android:layout_below="@id/matchTime"
+                android:gravity="center"
+                android:padding="20sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+</LinearLayout>
