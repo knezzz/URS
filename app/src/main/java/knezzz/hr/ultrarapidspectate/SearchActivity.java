@@ -49,19 +49,16 @@ public class SearchActivity extends ActionBarActivity {
 
             getCustomMatch(Long.parseLong(query));
 
-
             Log.e("Searching for", "query - "+ query);
         }
     }
-
-    Match customMatch;
 
     private void getCustomMatch(final long matchId){
         AsyncRiotAPI.setMirror(region);
         AsyncRiotAPI.setRegion(region);
         AsyncRiotAPI.setAPIKey(APIKey.KEY);
 
-        Thread t = new Thread(new Runnable() {
+        new Thread(new Runnable() {
             @Override
             public void run() {
                 AsyncRiotAPI.getMatch(new Action<Match>() {
@@ -72,26 +69,17 @@ public class SearchActivity extends ActionBarActivity {
 
                     @Override
                     public void perform(Match match) {
-                        customMatch = match;
+                        if(match != null) {
+                            Intent i = new Intent(SearchActivity.this, SpectateMain.class);
+                            i.putExtra("match", match);
+                            startActivity(i);
+                        }else{
+                            searchError("ERROR:", "Match " + matchId + " not found on " + region.toString() + "!");
+                        }
                     }
                 }, matchId);
             }
-        });
-
-        t.start();
-        try {
-            t.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        if(customMatch != null) {
-            Intent i = new Intent(SearchActivity.this, SpectateMain.class);
-            i.putExtra("match", customMatch);
-            startActivity(i);
-        }else{
-            Log.e("Something went wrong", "Match not found");
-        }
+        }).start();
     }
 
     public void searchError(final String query, final String cause){

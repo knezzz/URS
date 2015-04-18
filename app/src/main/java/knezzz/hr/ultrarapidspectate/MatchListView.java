@@ -7,9 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.robrua.orianna.type.core.common.Side;
 import com.robrua.orianna.type.core.match.Match;
+import com.robrua.orianna.type.core.match.MatchTeam;
 import com.robrua.orianna.type.core.match.Participant;
 
 import java.util.List;
@@ -63,10 +66,25 @@ public class MatchListView extends BaseAdapter{
         TextView blueKills = (TextView) convertView.findViewById(R.id.scoreTeam1);
         TextView redKills = (TextView) convertView.findViewById(R.id.scoreTeam2);
 
+        ImageView team100Final = (ImageView) convertView.findViewById(R.id.team100);
+        ImageView team200Final = (ImageView) convertView.findViewById(R.id.team200);
+
         int bk, rk;
 
         bk = 0;
         rk = 0;
+
+        for(MatchTeam mt : currentMatch.getTeams()){
+            if(mt.getSide().getID() == Side.BLUE.getID()){
+                if(mt.getWinner()){
+                    team100Final.setBackgroundResource(R.drawable.team100_won);
+                    team200Final.setBackgroundResource(R.drawable.team200_lost);
+                }else{
+                    team100Final.setBackgroundResource(R.drawable.team100_lost);
+                    team200Final.setBackgroundResource(R.drawable.team200_won);
+                }
+            }
+        }
 
         for(Participant p : currentMatch.getParticipants()){
             if(p.getTeam().getID() == 100){

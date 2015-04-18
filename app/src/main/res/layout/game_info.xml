@@ -33,6 +33,29 @@
         android:layout_width="@dimen/champion_preview_width"
         android:layout_height="@dimen/champion_preview_height"/>
 
+    <ImageView
+        android:layout_toRightOf="@id/summoner5"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/champion_preview_height" />
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_toRightOf="@id/summoner5"
+        android:layout_toLeftOf="@+id/summoner6"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/champion_preview_height">
+        <ImageView
+            android:id="@+id/team100"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/champion_preview_height" />
+        <ImageView
+            android:id="@+id/team200"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/champion_preview_height" />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
