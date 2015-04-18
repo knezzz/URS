@@ -34,3 +34,4 @@ proguard/
 
 # Log Files
 *.log
+app/src/main/java/knezzz/hr/ultrarapidspectate/APIKey.java
