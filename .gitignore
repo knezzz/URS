@@ -2,6 +2,9 @@
 *.apk
 *.ap_
 
+#API key
+app/src/main/java/knezzz/hr/ultrarapidspectate/APIKey.java
+
 # Files for the Dalvik VM
 *.dex
 
