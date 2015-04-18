@@ -43,6 +43,9 @@ public class MapView extends View{
     private static final int bitmapNexusSize = 130;
     private static final int moveChamptionIconFor = championIconSize/2;
 
+    int redTeamColor = getResources().getColor(R.color.redTeam);
+    int blueTeamColor = getResources().getColor(R.color.blueTeam);
+
     private static final int redNexusx = 13200;
     private static final int redNexusy = 13500;
    // 13052, 12612
@@ -102,9 +105,9 @@ public class MapView extends View{
             Position pp = currentMatch.getTimeline().getFrames().get(currentFrame).getFrameForParticipant(player).getPosition();
 
             if (player.getTeam().getID() == Side.BLUE.getID()) {
-                color = getResources().getColor(R.color.blueTeam);//R.color.blueTeam;//Color.BLUE);
+                color = blueTeamColor;
             } else {
-                color = getResources().getColor(R.color.redTeam);//R.color.redTeam;//Color.RED);
+                color = redTeamColor;
             }
 
             summoners.add(new Summoner(player, pp.getX(), pp.getY(), getIconWithBorder(player.getChampion().getImage().getFull(), color)));
@@ -431,11 +434,11 @@ public class MapView extends View{
             if(mt.getSide().getID() == Side.BLUE.getID()) {
                 if (mt.getWinner()) {
                     winner = "Blue team";
-                    winnerColor = getResources().getColor(R.color.blueTeam);//Color.BLUE);
+                    winnerColor = blueTeamColor;
                     canvas.drawBitmap(nexusDestroy, getScaledX(redNexusx) - (bitmapNexusSize / 2), getScaledY(redNexusy) - (bitmapNexusSize / 2), null);
                 } else {
                     winner = "Red team";
-                    winnerColor = getResources().getColor(R.color.redTeam);//Color.RED);
+                    winnerColor = redTeamColor;
                     canvas.drawBitmap(nexusDestroy, getScaledX(blueNexusx)-(bitmapNexusSize/2), getScaledY(blueNexusy)-(bitmapNexusSize/2), null);
                 }
             }
@@ -513,10 +516,10 @@ public class MapView extends View{
 
         if(e.getKiller().getTeam().getID() == Side.BLUE.getID()){
             killer = "Blue team";
-            killerColor = getResources().getColor(R.color.blueTeam);//Color.BLUE;
+            killerColor = blueTeamColor;
         }else{
             killer = "Red team";
-            killerColor = getResources().getColor(R.color.redTeam);//Color.RED;
+            killerColor = redTeamColor;
         }
 
         switch(e.getMonsterType()){
@@ -551,9 +554,9 @@ public class MapView extends View{
         }
 
         if(e.getTeam().getID() != Side.BLUE.getID()){
-            killerColor = getResources().getColor(R.color.blueTeam);//Color.BLUE;
+            killerColor = blueTeamColor;//getResources().getColor(R.color.blueTeam);//Color.BLUE;
         }else{
-            killerColor = getResources().getColor(R.color.redTeam);//Color.RED;
+            killerColor = redTeamColor;//getResources().getColor(R.color.redTeam);//Color.RED;
         }
 
         switch(e.getBuildingType()){
@@ -637,11 +640,11 @@ public class MapView extends View{
         }
 
         if(e.getVictim().getTeam().getID() != Side.BLUE.getID()){
-            killerColor = getResources().getColor(R.color.blueTeam);//Color.BLUE;
-            victimColor = getResources().getColor(R.color.redTeam);
+            killerColor = blueTeamColor;
+            victimColor = redTeamColor;
         }else{
-            killerColor = getResources().getColor(R.color.redTeam);//Color.RED;
-            victimColor = getResources().getColor(R.color.blueTeam);
+            killerColor = redTeamColor;
+            victimColor = blueTeamColor;
         }
 
         String assis = "";
@@ -668,10 +671,10 @@ public class MapView extends View{
         timelineTextField.addItem(killer, killerColor, event, victim, victimColor, multiKillText);
 
         if(allChampionsEliminated(e.getVictim().getTeam().getID())){
-            if(killerColor == getResources().getColor(R.color.blueTeam)){//Color.BLUE) {
-                timelineTextField.addItem("Blue team ACE!");
+            if(killerColor == blueTeamColor){//Color.BLUE) {
+                timelineTextField.addItem("Blue team", blueTeamColor, " scored ACE!");
             }else{
-                timelineTextField.addItem("Red team ACE");
+                timelineTextField.addItem("Red team", redTeamColor, " scored ACE");
             }
         }
     }
