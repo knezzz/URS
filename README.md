@@ -12,7 +12,8 @@
 
 #### _Android app that will show roughly how the game was played in 10x speed_
 
-##### The app can be downloaded here: [Dropbox](https://www.dropbox.com/s/00cievleaohu3m4/UltraRapidSpectate.apk?dl=0)
+##### The app can be downloaded here: ~~Dropbox~~
+###### Looks like Riot closed "api-challenge-v4.1" API call so the app dosen't work anymore, but I'm working on Match History app that will be similar.
 
 #### How does it work:
  **Map**:
